@@ -1,25 +1,63 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
+import axios from 'axios'
 
-export default class Login extends Component {
+class Signin extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      password: '',
+      info: '',
+      isLoading: false
+    };
+  }
+  
+  async handleLogin(e) {
+
+    e.preventDefault()
+
+    await axios.post('http://localhost:1010/login', this.state)
+      .then((res) => {
+        console.log(res.data.message)
+    
+
+        this.setState({info: res.data.message })
+        if (res.data.message === "Login successful") {
+          // console.log(res.data.firstname) 
+          window.localStorage.setItem('token', JSON.stringify(res.data.token))
+          window.localStorage.setItem('firstname', res.data.firstname) 
+          window.localStorage.setItem("lastname", res.data.lastname)
+          window.localStorage.setItem('id', res.data.id)
+          window.localStorage.setItem('photo', res.data.photo)
+          window.localStorage.setItem('email', res.data.email)
+          window.localStorage.setItem('number', res.data.number)       
+
+          this.setState({ isLoading: false })
+          this.props.history.push('/userdashboard')
+
+        } else {
+          this.props.history.push('/login')
+          this.setState({ isLoading: false })
+        }
+      })
+
+  }
+
+
+  emailHandle(e) {
+
+    this.setState({ email: e.target.value })
+    
+  }
+  passwordHandle(e) {
+    this.setState({ password: e.target.value })
+  }
+
   render() {
     return (
       <div>
-        <section id="page-title-area" className="section-padding overlay">
-          <div className="container">
-            <div className="row">
-              {/* Page Title Start */}
-              <div className="col-lg-12">
-                <div className="section-title  text-center">
-                  <h2>Login</h2>
-                  <span className="title-line"><i className="fa fa-car" /></span>
-                  <p>Welcome to Back.</p>
-                </div>
-              </div>
-              {/* Page Title End */}
-            </div>
-          </div>
-        </section>
         {/*== Login Page Content Start ==*/}
         <section id="lgoin-page-wrap" className="section-padding">
           <div className="container">
@@ -30,21 +68,17 @@ export default class Login extends Component {
                     <h3>Welcome Back!</h3>
                     <form action="#">
                       <div className="username">
-                        <input type="text" placeholder="Email or Username" />
+                        <input type="text" placeholder="Email or Username" value={this.state.email} onChange={this.emailHandle.bind(this)}  required />
                       </div>
                       <div className="password">
-                        <input type="password" placeholder="Password" />
+                        <input type="password" placeholder="Password" value={this.state.password} onChange={this.passwordHandle.bind(this)} required />
                       </div>
                       <div className="log-btn">
-                        <button type="submit"><i className="fa fa-sign-in" /> Log In</button>
+                        <button type="submit" onClick={this.handleLogin.bind(this)}><i className="fa fa-sign-in" /> Log In</button>
                       </div>
                     </form>
                   </div>
-                  <div className="login-other">
-                    <span className="or">or</span>
-                    <Link to="#" className="login-with-btn facebook"><i className="fa fa-facebook" /> Login With Facebook</Link>
-                    <Link to="#" className="login-with-btn google"><i className="fa fa-google" /> Login With Google</Link>
-                  </div>
+                  
                   <div className="create-ac">
                     <p>Don't have an account? <Link className='two' to='/register'>Sign Up</Link></p>
                   </div>
@@ -53,6 +87,7 @@ export default class Login extends Component {
                     <span>|</span>
                     <Link to="contact.html">Contact</Link>
                   </div>
+                  {this.state.info !== '' ? <div className='alert alert-danger'>{this.state.info}</div> : <div></div>}
                 </div>
               </div>
             </div>
@@ -63,3 +98,4 @@ export default class Login extends Component {
     );
   }
 }
+export default Signin

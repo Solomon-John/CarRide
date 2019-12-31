@@ -77,51 +77,76 @@ export default class landingPage extends Component {
     </section>
     {/* <!--== Slider Area End ==--> */}
 
-    {/* <!--== About Us Area Start ==--> */}
-    <section id="about-area" className="section-padding">
-        <div className="container">
-            <div className="row">
-                {/* <!-- Section Title Start --> */}
-                <div className="col-lg-12">
-                    <div className="section-title  text-center">
-                        <h2>About us</h2>
-                        <span className="title-line"><i className="fa fa-car"></i></span>
-                        <p>Get to Know More about what we do!!.</p>
-                    </div>
-                </div>
-                {/* <!-- Section Title End --> */}
-            </div>
-
-            <div className="row">
-                {/* <!-- About Content Start --> */}
-                <div className="col-lg-6">
-                    <div className="display-table">
-                        <div className="display-table-cell">
-                            <div className="about-content">
-                                <p>CarRide is an on-demand car-ride-hailing services created with the vision to solve the transportation challenge.</p>
-
-                                <p>To help people and goods to their destination, in timely and safe fashion. CarRide featured in the web and mobile app.</p>
-                                <div className="about-btn">
-                                    <Link to="#">Book a Car</Link>
-                                    <Link to="#">Contact Us</Link>
+        {/*== About Page Content Start ==*/}
+                <section id="about-area" className="section-padding">
+                    <div className="container">
+                        <div className="row">
+                            {/* Section Title Start */}
+                            <div className="col-lg-12">
+                                <div className="section-title  text-center">
+                                    <h2>About us</h2>
+                                    <span className="title-line"><i className="fa fa-car" /></span>
+                                    <p>Welcome, get alone with us.</p>
                                 </div>
                             </div>
+                            {/* Section Title End */}
                         </div>
+                        <div className="row">
+                            {/* About Content Start */}
+                            <div className="col-lg-6">
+                                <div className="display-table">
+                                    <div className="display-table-cell">
+                                        <div className="about-content">
+                                            <p>CarRide is an on-demand car-ride-hailing services created with the vision to solve the transportation challenge of getting people and goods to their destination, in timely and safe fashion. CarRide featured in the web and mobile app</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* About Content End */}
+                            {/* About Video Start */}
+                            <div className="col-lg-6">
+                                <div className="about-image">
+                                    <img src={require("../../asset/img/home-2-about.png")}/>
+                                </div>
+                            </div>
+                            {/* About Video End */}
+                        </div>
+                        {/* About Fretutes Start */}
+                        <div className="about-feature-area">
+                            <div className="row">
+                                {/* Single Fretutes Start */}
+                                <div className="col-lg-4">
+                                    <div className="about-feature-item active">
+                                        <i className="fa fa-car" />
+                                        <h3>FREE TYRE CARE PLAN</h3>
+                                        <p>Our free tyre care plan provides you with ongoing peace of mind when you purchase any tyres from the tyre care plan range.</p>
+                                    </div>
+                                </div>
+                                {/* Single Fretutes End */}
+                                {/* Single Fretutes Start */}
+                                <div className="col-lg-4">
+                                    <div className="about-feature-item">
+                                        <i className="fa fa-car" />
+                                        <h3>NEW CAR SERVICING</h3>
+                                        <p>We can examine your new vehicle in accordance with the manufacturer's requirements and maintain its statutory warranty.</p>
+                                    </div>
+                                </div>
+                                {/* Single Fretutes End */}
+                                {/* Single Fretutes Start */}
+                                <div className="col-lg-4">
+                                    <div className="about-feature-item">
+                                        <i className="fa fa-car" />
+                                        <h3>PACKAGED CAR SERVICING</h3>
+                                        <p>We offer two levels of packaged car servicing, each offering you a comprehensive check-up at a great price. Plus, selected services now come with 6 months free roadside assistance.</p>
+                                    </div>
+                                </div>
+                                {/* Single Fretutes End */}
+                            </div>
+                        </div>
+                        {/* About Fretutes End */}
                     </div>
-                </div>
-                {/* <!-- About Content End --> */}
-
-                {/* <!-- About Video Start --> */}
-                <div className="col-lg-6">
-                    <div className="about-video">
-                        <iframe src="https://player.vimeo.com/video/121982328?title=0&byline=0&portrait=0"></iframe>
-                    </div>
-                </div>
-                {/* <!-- About Video End --> */}
-            </div>
-        </div>
-    </section>
-    {/* <!--== About Us Area End ==--> */}
+                </section>
+                {/*== About Page Content End ==*/}
 
     
     {/* <!--== Services Area Start ==--> */}
@@ -176,8 +201,8 @@ export default class landingPage extends Component {
 				<div className="col-lg-4 text-center">
 					<div className="service-item">
 						<i className="fa fa-life-ring"></i>
-						<h3>life Insurance</h3>
-						<p>We give the best inssurance policy. In teams of Life-care</p>
+						<h3>DELIVERY</h3>
+						<p>We give the best delivery service in town.</p>
 					</div>
 				</div>
 				{/* <!-- Single Service End --> */}
@@ -206,62 +231,7 @@ export default class landingPage extends Component {
         </div>
     </section>
     {/* <!--== Services Area End ==--> */}
-
-    {/* <!--== Fun Fact Area Start ==--> */}
-    <section id="funfact-area" className="overlay section-padding">
-        <div className="container">
-            <div className="row">
-                <div className="col-lg-11 col-md-12 m-auto">
-                    <div className="funfact-content-wrap">
-                        <div className="row">
-                            {/* <!-- Single FunFact Start --> */}
-                            <div className="col-lg-4 col-md-6">
-                                <div className="single-funfact">
-                                    <div className="funfact-icon">
-                                        <i className="fa fa-smile-o"></i>
-                                    </div>
-                                    <div className="funfact-content">
-                                        <p><span className="counter">550</span>+</p>
-                                        <h4>HAPPY CLIENTS</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* <!-- Single FunFact End --> */}
-
-                            {/* <!-- Single FunFact Start --> */}
-                            <div className="col-lg-4 col-md-6">
-                                <div className="single-funfact">
-                                    <div className="funfact-icon">
-                                        <i className="fa fa-car"></i>
-                                    </div>
-                                    <div className="funfact-content">
-                                        <p><span className="counter">250</span>+</p>
-                                        <h4>CARS IN STOCK</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* <!-- Single FunFact End --> */}
-
-                            {/* <!-- Single FunFact Start --> */}
-                            <div className="col-lg-4 col-md-6">
-                                <div className="single-funfact">
-                                    <div className="funfact-icon">
-                                        <i className="fa fa-bank"></i>
-                                    </div>
-                                    <div className="funfact-content">
-                                        <p><span className="counter">50</span>+</p>
-                                        <h4>office in cities</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* <!-- Single FunFact End --> */}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    {/* <!--== Fun Fact Area End ==--> */}
+    
 
     {/* <!--== Our Cars Area Start ==--> */}
     <section id="our-cars" className="section-padding">
@@ -324,7 +294,7 @@ export default class landingPage extends Component {
 
                                             <div className="col-lg-4">
                                                 <div className="ourcar-info text-center">
-                                                    <h2>$ 75.40 <span>Rent per day</span></h2>
+                                                    <h2>N 7,540 <span>Rent per day</span></h2>
                                                     <table className="our-table">
                                                         <tr>
                                                             <td>Model</td>
@@ -369,7 +339,7 @@ export default class landingPage extends Component {
 
                                             <div className="col-lg-4">
                                                 <div className="ourcar-info text-center">
-                                                    <h2>$ 75.40 <span>Rent per day</span></h2>
+                                                    <h2>N 7,590 <span>Rent per day</span></h2>
                                                     <table className="our-table">
                                                         <tr>
                                                             <td>Model</td>
@@ -414,7 +384,7 @@ export default class landingPage extends Component {
 
                                             <div className="col-lg-4">
                                                 <div className="ourcar-info text-center">
-                                                    <h2>$ 75.40 <span>Rent per day</span></h2>
+                                                    <h2>N7,540 <span>Rent per day</span></h2>
                                                     <table className="our-table">
                                                         <tr>
                                                             <td>Model</td>
@@ -459,7 +429,7 @@ export default class landingPage extends Component {
 
                                             <div className="col-lg-4">
                                                 <div className="ourcar-info text-center">
-                                                    <h2>$ 75.40 <span>Rent per day</span></h2>
+                                                    <h2>N7,540 <span>Rent per day</span></h2>
                                                     <table className="our-table">
                                                         <tr>
                                                             <td>Model</td>
@@ -504,7 +474,7 @@ export default class landingPage extends Component {
 
                                             <div className="col-lg-4">
                                                 <div className="ourcar-info text-center">
-                                                    <h2>$ 75.40 <span>Rent per day</span></h2>
+                                                    <h2>N 7,540 <span>Rent per day</span></h2>
                                                     <table className="our-table">
                                                         <tr>
                                                             <td>Model</td>
@@ -565,7 +535,7 @@ export default class landingPage extends Component {
                 <div className="col-lg-4 col-md-6 text-center">
                     <div className="single-pricing-table">
                         <h3>BUSINESS</h3>
-                        <h2>$ 55.99</h2>
+                        <h2>N 55,990</h2>
                         <h5>PER MONTH</h5>
 
                         <ul className="package-list">
@@ -603,7 +573,7 @@ export default class landingPage extends Component {
                 <div className="col-lg-4 col-md-6 text-center">
                     <div className="single-pricing-table">
                         <h3>standard</h3>
-                        <h2>$ 35.99</h2>
+                        <h2>N 35,990</h2>
                         <h5>PER MONTH</h5>
 
                         <ul className="package-list">
@@ -622,332 +592,6 @@ export default class landingPage extends Component {
         </div>
     </section>
     {/* <!--== Pricing Area End ==--> */}
-
-   {/* <!--== Why Coose Us Start ==--> */}
-    <section id="why-choose-area" className="section-padding">
-        <div className="container">
-            <div className="row">
-                {/* <!-- Section Title Start --> */}
-                <div className="col-lg-12">
-                    <div className="section-title  text-center">
-                        <h2>Why Coose Us</h2>
-                        <span className="title-line"><i className="fa fa-car"></i></span>
-                        {/* <p>Lorem ipsum dolor sit amet elit.</p> */}
-                    </div>
-                </div>
-                {/* <!-- Section Title End --> */}
-            </div>
-
-            <div className="row">
-                <div className="col-lg-10 m-auto">
-                    <div className="row">
-                        {/* <!-- Why Choose Tab Menu --> */}
-                        <div className="col-lg-4">
-                            <ul className="nav nav-tabs" id="choosetabmenu" role="tablist">
-                                <li className="nav-item">
-                                    <a className="nav-link active" id="car-ins" data-toggle="tab" href="#car-insp" role="tab" aria-selected="true">CAR INSPECTION</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" id="car-repair" data-toggle="tab" href="#car-repairw" role="tab" aria-selected="false">CAR REPAIR WORKS</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" id="car-glass" data-toggle="tab" href="#car-glassing" role="tab" aria-selected="false">CAR GLASSING</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" id="delivery-tab" data-toggle="tab" href="#delivery" role="tab" aria-selected="false">DELIVERY</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" id="vehiclemodels-tab" data-toggle="tab" href="#vehiclemodels" role="tab" aria-selected="false">Vehicle Models</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" id="ourrental-tab" data-toggle="tab" href="#ourrental" role="tab" aria-selected="false">Our Rental</a>
-                                </li>
-                            </ul>
-                        </div>
-                        {/* <!-- Why Choose Tab Menu --> */}
-
-                        {/* <!-- Why Choose Tab Content --> */}
-                        <div className="col-lg-8">
-                            <div className="tab-content" id="choosetabcontent">
-                                <div className="tab-pane fade show active" id="car-insp" role="tabpanel" aria-labelledby="car-ins">
-                                    <div className="wchoose-content">
-                                        <h4>CAR INSPECTION</h4>
-                                        <p>Erspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beataesal vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia.</p>
-
-                                        <div className="row">
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-anchor"></i>
-                                                    </div>
-                                                    <span>Quia, odio, ipsam deleniti delectus assumenda cum.</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-delicious"></i>
-                                                    </div>
-                                                    <span>Deleniti eius fuga perferendis, dolorum atquesequi soluta.</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-bus"></i>
-                                                    </div>
-                                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <span>Beataesal vitae dicta sunt explicabo. Nemo enim ipsam </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="tab-pane fade" id="car-repairw" role="tabpanel" aria-labelledby="car-repair">
-                                    <div className="wchoose-content">
-                                        <h4>CAR REPAIR WORKS</h4>
-                                        <p>Erspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beataesal vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia.</p>
-
-                                        <div className="row">
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-anchor"></i>
-                                                    </div>
-                                                    <span>Quia, odio, ipsam deleniti delectus assumenda cum.</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-delicious"></i>
-                                                    </div>
-                                                    <span>Deleniti eius fuga perferendis, dolorum atquesequi soluta.</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-bus"></i>
-                                                    </div>
-                                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <span>Beataesal vitae dicta sunt explicabo. Nemo enim ipsam </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="tab-pane fade" id="car-glassing" role="tabpanel" aria-labelledby="car-glass">
-                                    <div className="wchoose-content">
-                                        <h4>CAR GLASSING</h4>
-                                        <p>Erspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beataesal vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia.</p>
-
-                                        <div className="row">
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-anchor"></i>
-                                                    </div>
-                                                    <span>Quia, odio, ipsam deleniti delectus assumenda cum.</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-delicious"></i>
-                                                    </div>
-                                                    <span>Deleniti eius fuga perferendis, dolorum atquesequi soluta.</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-bus"></i>
-                                                    </div>
-                                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <span>Beataesal vitae dicta sunt explicabo. Nemo enim ipsam </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="tab-pane fade" id="delivery" role="tabpanel" aria-labelledby="delivery-tab">
-                                    <div className="wchoose-content">
-                                        <h4>DELIVERY</h4>
-                                        <p>Erspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beataesal vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia.</p>
-
-                                        <div className="row">
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-anchor"></i>
-                                                    </div>
-                                                    <span>Quia, odio, ipsam deleniti delectus assumenda cum.</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-delicious"></i>
-                                                    </div>
-                                                    <span>Deleniti eius fuga perferendis, dolorum atquesequi soluta.</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-bus"></i>
-                                                    </div>
-                                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <span>Beataesal vitae dicta sunt explicabo. Nemo enim ipsam </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="tab-pane fade" id="vehiclemodels" role="tabpanel" aria-labelledby="vehiclemodels-tab">
-                                    <div className="wchoose-content">
-                                        <h4>Vehicle Models</h4>
-                                        <p>Erspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beataesal vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia.</p>
-
-                                        <div className="row">
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-anchor"></i>
-                                                    </div>
-                                                    <span>Quia, odio, ipsam deleniti delectus assumenda cum.</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-delicious"></i>
-                                                    </div>
-                                                    <span>Deleniti eius fuga perferendis, dolorum atquesequi soluta.</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-bus"></i>
-                                                    </div>
-                                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <span>Beataesal vitae dicta sunt explicabo. Nemo enim ipsam </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="tab-pane fade" id="ourrental" role="tabpanel" aria-labelledby="ourrental-tab">
-                                    <div className="wchoose-content">
-                                        <h4>Our Rental</h4>
-                                        <p>Erspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beataesal vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia.</p>
-
-                                        <div className="row">
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-anchor"></i>
-                                                    </div>
-                                                    <span>Quia, odio, ipsam deleniti delectus assumenda cum.</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-delicious"></i>
-                                                    </div>
-                                                    <span>Deleniti eius fuga perferendis, dolorum atquesequi soluta.</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-bus"></i>
-                                                    </div>
-                                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6 col-md-6">
-                                                <div className="single-choose-item">
-                                                    <div className="choose-icon">
-                                                        <i className="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <span>Beataesal vitae dicta sunt explicabo. Nemo enim ipsam </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {/* <!-- Why Choose Tab Content --> */}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    {/* <!--== Why Coose Us End ==--> */}
-
 
     {/* <!--== Mobile App Area Start ==--> */}
     <div id="mobileapp-video-bg"></div>

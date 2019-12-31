@@ -4,10 +4,10 @@ import LandingPage from './Component/pages/landingpage'
 import LoginPage from './Component/pages/loginpage'
 import RegisterPage from './Component/pages/Register'
 import CarPage from './Component/pages/CarsPage'
-import AboutPage from './Component/pages/Aboutpage'
 import Contact from './Component/pages/contact'
 import AdminLogin from './Component/Admin/AdminLogin'
 import userDashboard from './Component/User/Dashboard/userDashboard'
+import gallaryCard from './Component/User/GallaryCard'
 
 
 
@@ -31,15 +31,11 @@ export default class RoutePage extends Component {
 
         <Route  path='/car' strict exact={true} component={CarPage}/>
 
-        <Route  path='/about' strict exact={true} component={AboutPage}/>
-
         <Route  path='/contact' strict exact={true} component={Contact}/>
 
         <Route path= '/adminlogin' strict exact={true} component={AdminLogin}/>
 
         <Route path= '/userdashboard' strict exact={true} component={userDashboard}/>
-        
-
 
         </Switch>
         </div>

@@ -1,0 +1,20 @@
+#flex{
+    margin-top:100px;
+    background: transparent;
+}
+#cards{
+    padding: 10px;
+    margin:10px;
+    display: inline-flex;
+}
+#cards img{
+    height:10rem;
+}
+.welcame{
+    font-size: 18.5px;
+    font-weight: 400;
+    text-align: left;
+}
+#mas{
+    text-align: center;
+}

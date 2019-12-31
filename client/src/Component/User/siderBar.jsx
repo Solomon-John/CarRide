@@ -1,89 +1,63 @@
-import React, { Component } from 'react'
-import './siderBar.css'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import Axios from 'axios';
 
-export default class siderBar extends Component {
+class SideBar extends Component {
+    constructor(props, ...rest) {
+        super(props, ...rest);
+        this.state = {
+            firstname: '',
+            lastname: '',
+            email:'',
+            photo: '',
+            user_id: '',
+            number: ''
+        };
+    }
+
+    componentDidMount() {
+
+
+        const token = window.localStorage.getItem("token");
+        if (token) {
+
+            let id = window.localStorage.getItem("id");
+            let email = window.localStorage.getItem("email");
+            let firstname = window.localStorage.getItem("firstname");
+            let photo = window.localStorage.getItem("photo")
+            let number = window.localStorage.getItem('number')
+            let lastname = window.localStorage.getItem('lastname');
+
+            this.setState({ firstname: firstname, user_id: id, email: email, number: number, photo: photo, lastname: lastname })
+        }
+
+        // Axios.get("http://localhost:1010/alluser")
+        //     .then(res => {
+        //         // this.setState({alluser:res.data.info})  
+        //     })
+
+    }
+
     render() {
+        // console.log(this.state.lastname)
+
         return (
+
             <div>
-                    {/* <!-- Sidebar navigation --> */}
-                    <div id="slide-out" class="side-nav fixed wide sn-bg-1">
-                        <ul class="custom-scrollbar">
-                            {/* <!-- Logo --> */}
-                                <li>
-                                <div class="logo-wrapper sn-ad-avatar-wrapper">
-                                    <a href="#"><img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" class="rounded-circle"/><span>Anna Deynah</span></a>
-                                </div>
-                                </li>
-                                {/* <!--/. Logo --> */}
-                            {/* <!-- Side navigation links --> */}
-                                <li>
-                                    <ul class="collapsible collapsible-accordion">
-                                        <li><a class="collapsible-header waves-effect arrow-r active"><i class="sv-slim-icon fas fa-chevron-right"></i> Submit blog<i class="fas fa-angle-down rotate-icon"></i></a>
-                                            <div class="collapsible-body">
-                                                <ul>
-                                                    <li><a href="#" class="waves-effect active">
-                                                        <span class="sv-slim"> SL </span>
-                                                        <span class="sv-normal">Submit listing</span></a>
-                                                    </li>
-                                                    <li><a href="#" class="waves-effect">
-                                                        <span class="sv-slim"> RF </span>
-                                                        <span class="sv-normal">Registration form</span></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li><a class="collapsible-header waves-effect arrow-r"><i class="sv-slim-icon far fa-hand-point-right"></i> Instruction<i class="fas fa-angle-down rotate-icon"></i></a>
-                                            <div class="collapsible-body">
-                                                <ul>
-                                                    <li><a href="#" class="waves-effect">
-                                                        <span class="sv-slim"> FB </span>
-                                                        <span class="sv-normal">For bloggers</span></a>
-                                                    </li>
-                                                    <li><a href="#" class="waves-effect">
-                                                        <span class="sv-slim"> FA </span>
-                                                        <span class="sv-normal">For authors</span></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li><a class="collapsible-header waves-effect arrow-r"><i class="sv-slim-icon fas fa-eye"></i> About<i class="fas fa-angle-down rotate-icon"></i></a>
-                                            <div class="collapsible-body">
-                                                <ul>
-                                                    <li><a href="#" class="waves-effect">
-                                                        <span class="sv-slim"> I </span>
-                                                        <span class="sv-normal">Introduction</span></a>
-                                                    </li>
-                                                    <li><a href="#" class="waves-effect">
-                                                        <span class="sv-slim"> MM </span>
-                                                        <span class="sv-normal">Monthly meetings</span></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li><a class="collapsible-header waves-effect arrow-r"><i class="sv-slim-icon far fa-envelope"></i> Contact me<i class="fas fa-angle-down rotate-icon"></i></a>
-                                            <div class="collapsible-body">
-                                                <ul>
-                                                    <li><a href="#" class="waves-effect">
-                                                        <span class="sv-slim"> F </span>
-                                                        <span class="sv-normal">FAQ</span></a>
-                                                    </li>
-                                                    <li><a href="#" class="waves-effect">
-                                                        <span class="sv-slim"> W </span>
-                                                        <span class="sv-normal">Write a message</span></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li><a id="toggle" class="waves-effect"><i class="sv-slim-icon fas fa-angle-double-left"></i>Minimize menu</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                {/* <!--/. Side navigation links --> */}
-                            </ul>
-                            <div class="sidenav-bg rgba-blue-strong"></div>
-                        </div>
-                        {/* <!--/. Sidebar navigation --> */}
+                <div className="card text-center m-3 bg-light" style={{ width: '19rem' }}>
+                    <div className='card-header text-white bg-secondary text-center shadow'>Welcome,{this.state.firstname.toUpperCase()}</div>
+                    <div className='card-body'>
+                        <div className='m-3'> <img src={this.state.photo} className="card-img-top" alt="enter image" /></div>
+                        
+                        <div className='btn btn-info text-white grow btn-block '><Link className='text-white' to='/car'>Book Car</Link> </div>
+                        <Link to={`/${this.state.user_id}`}></Link>
+                        <div className='card-footer'></div>
+                        
+                    </div>
+                </div>
             </div>
-        )
+        );
     }
 }
+
+export default SideBar
